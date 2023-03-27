@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import {
   Dimensions,
@@ -18,6 +19,9 @@ const petra = require('./images/petra.png');
 const redeemer = require('./images/redeemer.png'); 
 const taj = require('./images/taj.png'); 
 const wall = require('./images/wall.png'); 
+
+SplashScreen.preventAutoHideAsync();
+setTimeout(SplashScreen.hideAsync, 2000);
 
 const SevenWonders = [
   { title: 'Great Wall of China', image: wall },
